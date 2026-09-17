@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>My Pantry — Recipe of the Day</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<main>
+  <div class="container">
+    <h1>My Pantry</h1>
+    <p class="subtle">Check off what you have on hand, add anything extra, then see what you can cook.</p>
+
+    <div class="pantry-grid" id="staples-grid"></div>
+
+    <h2 style="margin-top:32px;">Extra items</h2>
+    <div class="extra-row">
+      <input type="text" id="extra-name" placeholder="e.g. smoked paprika" />
+      <input type="text" id="extra-qty" placeholder="quantity (optional)" style="width:140px;" />
+      <button class="btn" id="extra-add">Add</button>
+    </div>
+    <div id="extras-list"></div>
+
+    <div class="btn-row">
+      <a href="#" class="btn btn-primary" id="find-recipes-btn">Recipes From My Pantry</a>
+    </div>
+
+    <div id="pantry-results-slot"></div>
+  </div>
+</main>
+<script type="module" src="js/page-pantry.js"></script>
+</body>
+</html>
