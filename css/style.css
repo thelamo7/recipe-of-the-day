@@ -480,6 +480,113 @@ h3 { font-size: 1.05rem; margin: 0 0 8px; }
   margin-top: 4px;
 }
 
+/* ---- Culinary Basics ---- */
+.progress-header {
+  background: var(--accent-light);
+  border-radius: var(--radius);
+  padding: 18px 22px;
+  margin: 16px 0 32px;
+}
+.progress-count {
+  font-weight: 700;
+  color: var(--accent-dark);
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+}
+.progress-bar-track {
+  height: 8px;
+  background: #fff;
+  border-radius: 999px;
+  overflow: hidden;
+}
+.progress-bar-fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 999px;
+  transition: width 0.2s ease;
+}
+
+.culinary-category { margin-bottom: 36px; }
+.culinary-category-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.culinary-category-header h2 { margin: 0; }
+.category-progress {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent-dark);
+  background: var(--accent-light);
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+
+.skill-list { display: flex; flex-direction: column; gap: 8px; }
+
+.skill-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.skill-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 6px;
+}
+
+.skill-check { display: flex; align-items: center; padding: 8px; }
+.skill-check input { width: 18px; height: 18px; accent-color: var(--accent); cursor: pointer; }
+
+.skill-title-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px 6px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--ink);
+  text-align: left;
+}
+.skill-title.learned { color: var(--accent-dark); }
+.skill-title.learned::after { content: " ✓"; }
+.skill-chevron { color: var(--ink-soft); font-size: 0.8rem; flex-shrink: 0; }
+
+.skill-card-body {
+  padding: 4px 18px 18px 46px;
+  border-top: 1px solid var(--line);
+  margin-top: 2px;
+  padding-top: 14px;
+}
+
+.skill-steps { margin: 0 0 12px; padding-left: 20px; font-size: 0.9rem; }
+.skill-steps li { margin-bottom: 6px; }
+
+.skill-tip {
+  background: var(--accent-light);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 0.85rem;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+.skill-tip strong { color: var(--accent-dark); }
+
+.skill-video { font-size: 0.88rem; }
+.video-link { font-weight: 600; }
+
 footer.site-footer {
   border-top: 1px solid var(--line);
   padding: 24px 0;

@@ -11,6 +11,7 @@ export function renderNav(activePage) {
     { href: "pantry.html", label: "My Pantry", key: "pantry" },
     { href: "log.html", label: "Cooking Log", key: "log" },
     { href: "diet.html", label: "Diet Plan", key: "diet" },
+    { href: "culinary.html", label: "Culinary Basics", key: "culinary" },
   ];
   const header = document.createElement("header");
   header.className = "site-header";

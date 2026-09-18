@@ -8,6 +8,7 @@ const KEYS = {
   MEAL_POOL: "rotd.mealPool",
   DAILY_CACHE: "rotd.dailyCache",
   DIET_PROFILE: "rotd.dietProfile",
+  LEARNED_SKILLS: "rotd.learnedSkills",
 };
 
 function readJSON(key, fallback) {
@@ -199,4 +200,25 @@ export function getDietProfile() {
 
 export function setDietProfile(profile) {
   writeJSON(KEYS.DIET_PROFILE, profile);
+}
+
+// ---- Culinary Basics progress ----
+// { [skillId]: true }
+export function getLearnedSkills() {
+  return readJSON(KEYS.LEARNED_SKILLS, {});
+}
+
+export function isSkillLearned(skillId) {
+  return Boolean(getLearnedSkills()[skillId]);
+}
+
+export function toggleSkillLearned(skillId) {
+  const learned = getLearnedSkills();
+  if (learned[skillId]) {
+    delete learned[skillId];
+  } else {
+    learned[skillId] = true;
+  }
+  writeJSON(KEYS.LEARNED_SKILLS, learned);
+  return Boolean(learned[skillId]);
 }
